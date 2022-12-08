@@ -70,6 +70,14 @@ const Menu = styled.div`
             text-transform: uppercase;
             padding: 0 10px;
             flex-wrap: nowrap;
+
+            &:hover {
+                background-color: #DAEAF1;
+                text-decoration: none;
+                border-radius: 5px;
+                padding: 2px 3px;
+                transition: 1s;
+            }
         }
 
         @media (max-width: 768px) {
