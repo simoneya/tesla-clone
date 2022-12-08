@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { selectCars } from '../features/car/carSlice';
+import { useSelector } from 'react-redux';
 
 function Header () {
   const [burgerStatus, setBurgerStatus] = useState(false);
+  const cars = useSelector(selectCars);
+  console.log(cars);
 
   return (
     <Container>
@@ -12,10 +16,9 @@ function Header () {
             <img src="/images/logo.svg" alt="logo"/>
             </a>
         <Menu>
-            <a href="#">Model S</a>
-            <a href="#">Model 3</a>
-            <a href="#">Model X</a>
-            <a href="#">Model Y</a>
+            {cars && cars.map((car, index) => (
+                <a key= {index} href="#">{car}</a>
+            ))}
         </Menu>
         <RightMenu>
             <a href="#">Shop</a>
@@ -26,24 +29,19 @@ function Header () {
          <CloseWrapper>
             <CustomClose onClick={()=>setBurgerStatus(false)}/>
          </CloseWrapper>
+            {cars && cars.map((car, index) => (
+                 <li key= {index} ><a href="#">{car}</a></li>
+              ))}
             <li><a href="#">Existing Inventory</a></li>
             <li><a href="#">Used Inventory</a></li>
-            <li><a href="#">Trade-in</a></li>
+            <li><a href="#">Trade-In</a></li>
             <li><a href="#">Test Drive</a></li>
             <li><a href="#">Insurance</a></li>
             <li><a href="#">Cybertruck</a></li>
             <li><a href="#">Roadaster</a></li>
-            <li><a href="#">Semi</a></li>
-            <li><a href="#">Charging</a></li>
-            <li><a href="#">Powerwall</a></li>
-            <li><a href="#">Commercial Energy</a></li>
-            <li><a href="#">Utilities</a></li>
-            <li><a href="#">Find Us</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Investor Relations</a></li>
         </BurgerNav>
     </Container>
-  )
+  );
 }
 
 export default Header; 
@@ -95,7 +93,7 @@ const CustomMenu = styled(MenuIcon)`
 `;
 
 const BurgerNav = styled.div`
-        postion: fixed;
+        position: fixed;
         top: 0;
         bottom: 0;
         right: 0;
