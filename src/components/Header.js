@@ -74,9 +74,10 @@ const Menu = styled.div`
             &:hover {
                 background-color: #DAEAF1;
                 text-decoration: none;
-                border-radius: 5px;
-                padding: 2px 3px;
-                transition: 1s;
+                border-radius: 10px;
+                padding: 4px 5px;
+                transition: 0.5s;
+                opacity: 0.8;
             }
         }
 
