@@ -74,7 +74,7 @@ const Menu = styled.div`
             &:hover {
                 background-color: #DAEAF1;
                 text-decoration: none;
-                border-radius: 10px;
+                border-radius: 15px;
                 padding: 4px 5px;
                 transition: 0.5s;
                 opacity: 0.8;
@@ -94,7 +94,17 @@ const RightMenu = styled.div`
             font-weight: 600;
             text-transform: uppercase;
             margin-right: 10px;
+
+            &:hover {
+                background-color: #DAEAF1;
+                text-decoration: none;
+                border-radius: 15px;
+                padding: 4px 5px;
+                transition: 0.5s;
+                opacity: 0.8;
+            }
         }
+
 `;
 
 const CustomMenu = styled(MenuIcon)`
