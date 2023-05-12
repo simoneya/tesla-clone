@@ -72,7 +72,7 @@ const Menu = styled.div`
             flex-wrap: nowrap;
 
             &:hover {
-                background-color: #DAEAF1;
+                background-color: #E8F6EF;
                 text-decoration: none;
                 border-radius: 15px;
                 padding: 4px 5px;
@@ -96,7 +96,7 @@ const RightMenu = styled.div`
             margin-right: 10px;
 
             &:hover {
-                background-color: #DAEAF1;
+                background-color: #E8F6EF;
                 text-decoration: none;
                 border-radius: 15px;
                 padding: 4px 5px;
