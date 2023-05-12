@@ -75,7 +75,7 @@ const Menu = styled.div`
                 background-color: #E8F6EF;
                 text-decoration: none;
                 border-radius: 15px;
-                padding: 4px 5px;
+                padding: 8px 9px;
                 transition: 0.5s;
                 opacity: 0.8;
             }
